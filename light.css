@@ -1,4 +1,4 @@
-  <style>
+
 		body {
 			background-image: linear-gradient(225deg, #a18cd1, #fbc2eb);
 			display:flex;
@@ -8,7 +8,14 @@
 			padding-bottom: 10vh;
 			}
 		
-		#div1_1 {
+		#div1_1{
+		 	border:0px solid red;
+			display: flex;
+			flex-direction: row;
+		 	width: 23vw;
+		 }
+
+		#div1_2 {
 			border:2px solid white;
 			display:flex;
 			flex-direction: row;
@@ -48,7 +55,7 @@
 			box-shadow: 6px 2px 20px 3px grey;
 		}
 		
-		#ip1,#ip2{
+		#ip1,#ip2,#ip3,#ip4,#ip5{
 			
 			padding: 22px;		
 			padding-bottom: 5px;
@@ -64,4 +71,3 @@
 		#button1:hover, #button2:hover {
 			box-shadow: 1px 1px 5px 1px grey;
 		}
-	</style>

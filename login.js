@@ -1,21 +1,30 @@
-import * as React from 'react';
+<script type="text/babel">
+var Checkbox = React.createClass({
+  getInitialState: function() {
+	return {checked: true}
+  },
+  handleCheck: function() {
+	this.setState({checked: !this.state.checked});
+  },
+  render: function() {
+	var msg; var sc;
+	if (this.state.checked) {
+	  msg = "Checked";
+		sc="#react-container{border:1px solid red;}"
+	} else {
+	  msg = "Un-checked";
+	}
+	return (
+	  <div class="container">
+		<input type="checkbox" class="toggle" onChange={this.handleCheck} defaultChecked={this.state.checked}/>
+		<p>Checkbox: {msg}</p>
+		<style>{sc}</style>
+	  </div>
+	);
+  }
+});
 
-export default class MainPage extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {stylePath: 'dark.css'};
-    }
-
-    handleButtonClick(){
-        this.setState({stylePath: 'light.css'});
-    }
-
-    render(){
-        return (
-            <div>
-                <link rel="stylesheet" type="text/css" href={this.state.stylePath} />
-                <button type="button" onClick={this.handleButtonClick.bind(this)}>Click to update stylesheet</button>
-            </div>
-        )
-    }
-};
+React.render(<Checkbox />,
+  document.getElementById('react-container')
+);
+</script>
