@@ -115,10 +115,10 @@ body{
 	flex-direction: column;
 	align-items: center;
 	background-image:linear-gradient( -45deg, #d5d7e5, #eee, #d5d7e5);
-	border:1px solid red;
 	margin:8% 5% -3%;
 	animation: shine 1s infinite ease-in;
 	border-radius: 15px;
+	box-shadow:3px 2px 10px 0 #aaa;
 }
 .atmcard_elem1{
 	background:#666; 
@@ -130,6 +130,7 @@ body{
     border-bottom-right-radius: 100px;
 	position:relative;
 	left:65px;
+	box-shadow: inset 5px -1px 15px 1px #aaa;
 }
 
 .atmcard_elem2{
@@ -141,24 +142,45 @@ body{
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
 	position:relative;
-	left:-50px;
-	top:108px;
+	left:-65px;
+	top:107px;
+	box-shadow: inset 5px -1px 15px 1px #aaa;
 }
 .chip{
 	height: 35px;
 	border-radius:19%;
 	position:relative;
 	top: 65px;
-	left:-120px
+	left:-125px
 }
 
+.button1 {
+			border-radius: 25px;
+			border:0px;
+			background-image: linear-gradient(to left, #141e30, #243b55);
+			padding: 0vh;
+			width: 7vw;
+			height: 7vh;
+			margin: 1vw;
+			font-family:MuseoModerno;
+			font-size:15;
+			color: #ddd;
+			outline: none;
+			position:absolute;
+			left:44%;
+			top:85.5%;
+				
+		}
+.button1:hover {
+			box-shadow: 1px 1px 5px 1px grey;
+		}
 .dorpdown{
 	
 }
 
 @keyframes shine { 
   0% {
-      background:linear-gradient( 45deg, #d5d7e5,#d5d7e5, #eee, #d5d7e5,#d5d7e5, #d5d7e5);
+      background-image:linear-gradient( 45deg, #d5d7e5,#d5d7e5, #eee, #d5d7e5,#d5d7e5, #d5d7e5);
   }
   
   20% {
@@ -174,6 +196,6 @@ body{
 	  background-image:linear-gradient( 45deg, #eee, #d5d7e5,  #d5d7e5,#d5d7e5,#d5d7e5, #d5d7e5);
 	}
   100% {
-      background-image:linear-gradient( 45deg, #d5d7e5, #eee, #d5d7e5, #d5d7e5);
+      background-image:linear-gradient( 45deg, #d5d7e5, #d5d7e5, #eee, #d5d7e5, #d5d7e5, #d5d7e5);
   }
 }
